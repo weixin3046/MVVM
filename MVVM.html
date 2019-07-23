@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="message.a">
+		<div>{{message.a}}</div>
+		<ul><li></li></ul>
+		{{message.a}}
+	</div>
+	<script src="watcher.js"></script>
+	<script src="observer.js"></script>
+	<script src="compile.js"></script>
+	<script src="MVVM.JS"></script>
+	<script>
+		//我们的数据一般都挂载在vm上
+		// Object.defineProperty get和set
+		// 
+		let vm = new MVVM({
+			el: '#app',
+			data: {
+				message: {
+					a: 'hello world'
+				},
+				a: 1
+			}
+		})
+
+	</script>
+</body>
+</html>
