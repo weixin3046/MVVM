@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div>{{msg}}</div>
+		<p>{{msg1}}</p>
+	</div>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				msg: "hello,world"
+			},
+			watch: {
+				msg: function(newVal, oldVal) {
+					console.log("newVal is:" + newVal);
+					console.log("oldVal is:" + oldVal);
+				}
+			},
+			computed: {
+				msg1: function() {
+					return 'computed:' + this.msg
+				}
+			}
+		})
+	</script>
+</body>
+</html>
